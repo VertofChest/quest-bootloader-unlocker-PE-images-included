@@ -8,4 +8,4 @@ It uses [CVE-2021-1931](https://nvd.nist.gov/vuln/detail/CVE-2021-1931) a buffer
 This [blogpost](https://www.pentestpartners.com/security-blog/breaking-the-android-bootloader-on-the-qualcomm-snapdragon-660/) by Christopher Wade is about the discovery of this vulnerability.<br>
 
 Using the vulnerability this tool patches the signature checks for unlocking the bootloader and then unlocks it.<br>
-The bootloader binary can be extracted with [extract_android_ota_payload](https://github.com/cyxx/extract_android_ota_payload) and then ~~[uefi-firmware-parser](https://github.com/theopolis/uefi-firmware-parser)~~ I used [UEFITool](https://github.com/LongSoft/UEFITool/wiki), couldnt get uefi-firmware-parser to work on the `abl.img`
+The bootloader binary can be extracted with [extract_android_ota_payload](https://github.com/cyxx/extract_android_ota_payload) and then [UEFITool](https://github.com/LongSoft/UEFITool/wiki) to extract the PE32 image body from the decompressed Lzma volume image section on the `abl.img`
